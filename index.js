@@ -7,8 +7,8 @@ createApp({
             vilao: { vida: 100, vidaMaxima: 100 },      
             vidaAntesDoAtaqueHeroi: null,
             vidaAntesDoAtaqueVilao: null,
-            heroiAcao: "Placeholder Imagem",
-            vilaoAcao: "Placeholder Imagem"
+            heroiAcao: "",
+            vilaoAcao: ""
         }
     },
     methods: {
