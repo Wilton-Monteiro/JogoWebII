@@ -16,9 +16,9 @@
 #### 4-Continue jogando até derrotar o vilão ou até a vida do seu personagem chegar a zero.
 
 # Tecnologias utilizadas:
-Vue.js
-HTML5
-CSS3
+#### Vue.js
+#### HTML5
+#### CSS3
 
 
 
