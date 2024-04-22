@@ -15,11 +15,13 @@ createApp({
         atacar(isHeroi) {
             if (isHeroi) {
                 console.log("Herói atacou")
+                this.heroiAcao = "O Herói atacou"
                 this.vidaAntesDoAtaqueHeroi = this.heroi.vida;
                 this.vilao.vida = Math.max(0, Math.min(this.vilao.vidaMaxima, this.vilao.vida - 10));
                 this.acaoVilao();
             } else {
                 console.log("Vilão atacou")
+                this.vilaoAcao = "O Vilão Atacou"
                 this.vidaAntesDoAtaqueVilao = this.heroi.vida; 
                 this.heroi.vida = Math.max(0, Math.min(100, this.heroi.vida - 10)); 
                 this.acaoVilao();
@@ -28,12 +30,14 @@ createApp({
         defender(isHeroi) {
             if (isHeroi) {
                 console.log("Herói defendeu")
+                this.heroiAcao = "O Herói defendeu"
                 if (this.vidaAntesDoAtaqueVilao !== null) {
                     this.heroi.vida = this.vidaAntesDoAtaqueVilao;
                     this.vidaAntesDoAtaqueVilao = null;
                 }
             } else {
                 console.log("Vilão defendeu")
+                this.vilaoAcao = "O Vilão Defendeu"
                 if (this.vidaAntesDoAtaqueHeroi !== null) {
                     this.vilao.vida = this.vidaAntesDoAtaqueHeroi;
                     this.vidaAntesDoAtaqueHeroi = null; 
@@ -44,9 +48,11 @@ createApp({
             if (isHeroi){
                 if(this.heroi.vida <= 80){
                     console.log("Herói usou poção");
+                    this.heroiAcao = "O Herói usou poção"
                     this.heroi.vida = Math.max(0, Math.min(100, this.heroi.vida + 20));
                 } else {
                     console.log("Vilão usou poção");
+                    this.vilaoAcao = "O Vilão usou poção"
                     this.vilao.vida = Math.max(0, Math.min(100, this.vilao.vida + 20));
                 }
             }
@@ -54,9 +60,11 @@ createApp({
         correr(isHeroi) {
             if (isHeroi) {
                 console.log("Herói Correu");
+                this.heroiAcao = "O Herói Correu"
                 this.heroi.vida = 0;
             } else {
                 console.log("Vilão Correu");
+                this.vilaoAcao = "O Vilão Correu"
                 this.vilao.vida = 0;
                 
             }
