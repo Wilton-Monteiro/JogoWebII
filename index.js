@@ -60,11 +60,11 @@ createApp({
         correr(isHeroi) {
             if (isHeroi) {
                 console.log("Herói Correu");
-                this.heroiAcao = "O Herói Correu"
+                this.heroiAcao = "O Herói Correu - fim de jogo"
                 this.heroi.vida = 0;
             } else {
                 console.log("Vilão Correu");
-                this.vilaoAcao = "O Vilão Correu"
+                this.vilaoAcao = "O Vilão Correu - fim de jogo"
                 this.vilao.vida = 0;
                 
             }
