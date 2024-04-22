@@ -47,6 +47,7 @@ createApp({
                     this.heroi.vida = Math.max(0, Math.min(100, this.heroi.vida + 20));
                 } else {
                     console.log("Vilão usou poção");
+                    this.vilao.vida = Math.max(0, Math.min(100, this.vilao.vida + 20));
                 }
             }
         },
